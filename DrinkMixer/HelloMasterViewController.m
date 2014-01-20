@@ -9,6 +9,8 @@
 #import "HelloMasterViewController.h"
 
 #import "HelloDetailViewController.h"
+#import "DrinkDetailViewController.h"
+
 
 @interface HelloMasterViewController () {
     NSMutableArray *_objects;
@@ -16,6 +18,8 @@
 @end
 
 @implementation HelloMasterViewController
+
+@synthesize drinks;
 
 - (void)awakeFromNib
 {
@@ -30,6 +34,22 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    /*
+    NSMutableArray* tmpArray = [[NSMutableArray alloc] initWithObjects:@"Firecracker", @"Lemon Drop", @"Mojito", nil];
+     */
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"DrinkArray" ofType:@"plist"];
+    NSMutableArray* tmpArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    
+    _objects = tmpArray;
+    
+    for (NSString *pStr in tmpArray) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    
+//    [tmpArray release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,21 +105,21 @@
     }
 }
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    NSLog(@"moveRowAtIndexPath");
 }
-*/
 
-/*
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

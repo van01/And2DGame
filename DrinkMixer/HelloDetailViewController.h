@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface HelloDetailViewController : UIViewController
+{
+    IBOutlet UILabel* ingredientsTextView;
+    IBOutlet UILabel* directionsTextView;
+    IBOutlet UITextField* nameTextField;
+}
+
+@property (retain, nonatomic) UILabel* ingredientsTextView;
+@property (retain, nonatomic) UILabel* directionsTextView;
+@property (retain, nonatomic) UITextField* nameTextField;
 
 @property (strong, nonatomic) id detailItem;
 

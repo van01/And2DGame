@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692DB9A118801FF7000A58AE /* DrinkArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692DB9A018801FF7000A58AE /* DrinkArray.plist */; };
+		692DB9A81882A4CA000A58AE /* DrinkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 692DB9A71882A4CA000A58AE /* DrinkDetailViewController.m */; };
 		69F252B4187EBEF200459BCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F252B3187EBEF200459BCF /* Foundation.framework */; };
 		69F252B6187EBEF200459BCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F252B5187EBEF200459BCF /* CoreGraphics.framework */; };
 		69F252B8187EBEF200459BCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F252B7187EBEF200459BCF /* UIKit.framework */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		692DB9A018801FF7000A58AE /* DrinkArray.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DrinkArray.plist; sourceTree = "<group>"; };
+		692DB9A61882A4CA000A58AE /* DrinkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkDetailViewController.h; path = ../DrinkDetailViewController.h; sourceTree = "<group>"; };
+		692DB9A71882A4CA000A58AE /* DrinkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkDetailViewController.m; path = ../DrinkDetailViewController.m; sourceTree = "<group>"; };
 		69F252B0187EBEF200459BCF /* DrinkMixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkMixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F252B3187EBEF200459BCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		69F252B5187EBEF200459BCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +120,8 @@
 		69F252B9187EBEF200459BCF /* DrinkMixer */ = {
 			isa = PBXGroup;
 			children = (
+				692DB9A61882A4CA000A58AE /* DrinkDetailViewController.h */,
+				692DB9A71882A4CA000A58AE /* DrinkDetailViewController.m */,
 				69F252C2187EBEF200459BCF /* HelloAppDelegate.h */,
 				69F252C3187EBEF200459BCF /* HelloAppDelegate.m */,
 				69F252C5187EBEF200459BCF /* Main.storyboard */,
@@ -132,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				69F252BB187EBEF200459BCF /* DrinkMixer-Info.plist */,
+				692DB9A018801FF7000A58AE /* DrinkArray.plist */,
 				69F252BC187EBEF200459BCF /* InfoPlist.strings */,
 				69F252BF187EBEF200459BCF /* main.m */,
 				69F252C1187EBEF200459BCF /* DrinkMixer-Prefix.pch */,
@@ -235,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69F252CF187EBEF200459BCF /* Images.xcassets in Resources */,
+				692DB9A118801FF7000A58AE /* DrinkArray.plist in Resources */,
 				69F252BE187EBEF200459BCF /* InfoPlist.strings in Resources */,
 				69F252C7187EBEF200459BCF /* Main.storyboard in Resources */,
 			);
@@ -255,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692DB9A81882A4CA000A58AE /* DrinkDetailViewController.m in Sources */,
 				69F252CD187EBEF200459BCF /* HelloDetailViewController.m in Sources */,
 				69F252C0187EBEF200459BCF /* main.m in Sources */,
 				69F252CA187EBEF200459BCF /* HelloMasterViewController.m in Sources */,
@@ -467,6 +477,7 @@
 				69F252E7187EBEF200459BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69F252E8187EBEF200459BCF /* Build configuration list for PBXNativeTarget "DrinkMixerTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +486,7 @@
 				69F252EA187EBEF200459BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HelloMasterViewController : UITableViewController
+{
+    NSMutableArray* drinks;
+}
+
+@property (nonatomic, retain) NSMutableArray* drinks;
 
 @end

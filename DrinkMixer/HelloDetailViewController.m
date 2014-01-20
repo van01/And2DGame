@@ -14,6 +14,10 @@
 
 @implementation HelloDetailViewController
 
+@synthesize directionsTextView;
+@synthesize ingredientsTextView;
+@synthesize nameTextField;
+
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
